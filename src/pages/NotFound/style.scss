@@ -1,0 +1,13 @@
+.notfound__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - var(--footer-height) - var(--header-height));
+  flex-direction: column;
+
+  h2 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+  }
+}

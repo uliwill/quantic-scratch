@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 6rem;
+  --footer-height: 8rem;
+
+  /*========== Colors ==========*/
+  --title-color: #080a3c;
+  --text-color: #4a6f8a;
+  --text-color-light: #13c4a1;
+  --container-color: #ffffff;
+  --container-color-alt: #f4f6fc;
+  --body-color: #f4f6fc;
+  --body-color-alt: #13c4a1;
+  --button-color: #13c4a1;
+  --button-color-alt: #080a3c;
+  --button-color-alt2: #ffffff;
+
+  /*========== Font and typography ==========*/
+  --body-font: "Noto Sans JP", sans-serif;
+  --h1-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margin ==========*/
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+.container {
+  width: 100%;
+  height: calc(100vh - var(--footer-height) - var(--header-height));
+  min-height: 500px;
+  background-color: var(--container-color-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container__content {
+    width: 100%;
+    height: calc(100vh - var(--footer-height) - var(--header-height));
+  }
+}
+
+.icons {
+  font-size: 2rem;
+  color: var(--button-color-alt);
+  transition: 0.5s;
+
+  &:hover {
+    color: var(--button-color);
+  }
+}
+
+.icons.navbar {
+  font-size: 4rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+
+    .container__content {
+      width: 100%;
+      height: calc(100vh - var(--footer-height) - var(--header-height) - 100px);
+    }
+  }
+}

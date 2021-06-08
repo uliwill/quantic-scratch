@@ -1,0 +1,116 @@
+.header__container {
+  background-color: var(--container-color);
+  width: 100%;
+  height: var(--header-height);
+
+  .header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding-left: var(--mb-3);
+    padding-right: var(--mb-3);
+
+    .header__button {
+      display: inline-block;
+      text-align: center;
+      transition: 0.5s;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: var(--normal-font-size);
+      padding: 1rem 2rem;
+      background-color: var(--title-color);
+      color: var(--container-color);
+      border: none;
+      cursor: pointer;
+
+      .icons {
+        font-size: 1rem;
+        color: var(--container-color);
+        margin-right: 0.5rem;
+      }
+
+      &:hover {
+        background-color: var(--button-color);
+      }
+    }
+  }
+}
+
+.modal__container {
+  display: none;
+}
+
+.modal__container.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(19, 196, 161, 0.7);
+
+  .modal__card {
+    background-color: var(--body-color);
+    width: 70%;
+    height: 30%;
+    text-align: center;
+    border-radius: 20px;
+
+    h2 {
+      font-size: var(--h2-font-size);
+      letter-spacing: 0.3rem;
+      padding-top: 1rem;
+      color: var(--title-color);
+    }
+
+    table {
+      width: 80%;
+      color: var(--text-color);
+      margin: 1rem auto;
+
+      td {
+        height: 2rem;
+
+        a {
+          text-decoration: none;
+          color: var(--text-color);
+        }
+      }
+    }
+  }
+
+  span {
+    font-size: var(--smaller-font-size);
+  }
+}
+
+.logo__mobile {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .logo__mobile {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .logo__desktop {
+    display: none;
+  }
+
+  .modal__container.active {
+    .modal__card {
+      width: 90%;
+      height: 40%;
+
+      table {
+        width: 100%;
+      }
+    }
+  }
+}

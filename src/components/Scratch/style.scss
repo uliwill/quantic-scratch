@@ -1,0 +1,72 @@
+.scratch__container {
+  width: 100%;
+  height: calc(100vh - var(--footer-height) - var(--header-height));
+  min-height: 500px;
+  background-color: var(--container-color-alt);
+
+  .scratch__content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.scratchpad {
+  width: 450px;
+  height: 450px;
+  cursor: grabbing;
+
+  .ScratchCard__Result {
+    width: 100%;
+    height: 100%;
+
+    .scratch__tryagain {
+      background-image: url("../../img/tryagain450.png");
+      background-size: cover;
+      width: 450px;
+      height: 450px;
+      border: 2px solid var(--text-color-light);
+    }
+    .scratch__winner {
+      background-image: url("../../img/winner450.png");
+      background-size: cover;
+      width: 450px;
+      height: 450px;
+      border: 2px solid var(--text-color-light);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .scratchpad {
+    width: 375px;
+    height: 375px;
+
+    .ScratchCard__Container {
+      width: 100% !important;
+      height: 100% !important;
+
+      .scratch__content {
+        height: auto;
+      }
+    }
+
+    .ScratchCard__Canvas {
+      width: 375px !important;
+      height: 375px !important;
+    }
+
+    .scratch__tryagain {
+      width: 375px !important;
+      height: 375px !important;
+    }
+
+    .scratch__winner {
+      width: 375px !important;
+      height: 375px !important;
+    }
+  }
+}

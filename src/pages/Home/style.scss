@@ -1,0 +1,22 @@
+.home__container {
+  height: calc(100vh - var(--footer-height) - var(--header-height));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
+  }
+
+  h2 {
+    font-size: var(--h2-font-size);
+    padding-top: 1rem;
+    color: var(--title-color);
+  }
+
+  p {
+    padding-top: 3rem;
+  }
+}
